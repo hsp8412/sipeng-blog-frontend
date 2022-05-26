@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { getPosts } from "../../service/postService";
 import _ from "lodash";
 import Post from "./post";
@@ -15,15 +15,17 @@ const PostList = () => {
   console.log(display);
 
   return (
-    <div>
+    <Container>
       {display.map((row, index) => (
         <Row key={index}>
           {row.map((post) => (
-            <Post key={post.id} post={post} />
+            <Col md={6}>
+              <Post key={post.id} post={post} />
+            </Col>
           ))}
         </Row>
       ))}
-    </div>
+    </Container>
   );
 };
 

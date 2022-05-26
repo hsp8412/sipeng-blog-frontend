@@ -151,21 +151,23 @@
     }
 
     .nav-menu{
+        background: white;
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 100%;
+        height: 200px;
         position:absolute;
         top: 80px;
         left:-100%;
-        opacity:1;
         transition: all 0.5s ease
     }
 
     .nav-menu.menu-active{
         left:0;
+        height: 200px;
         transition: all 0.5s ease;
         z-index: 1;
+        background: white;
     }
 
     .menu-item{

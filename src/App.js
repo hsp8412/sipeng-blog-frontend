@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
       <MyNav />
-      {/*<Routes>*/}
-      {/*  <Route path="/" element={<Home />} />*/}
-      {/*</Routes>*/}
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }

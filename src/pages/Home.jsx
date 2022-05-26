@@ -1,18 +1,21 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import PostList from "../components/posts/postList";
 import InfoCard from "../components/infoCard";
+import "../css/home.css";
 
 const Home = () => {
   return (
-    <Row className="mt-4">
-      <Col>
-        <PostList />
-      </Col>
-      <Col>
-        <InfoCard />
-      </Col>
-    </Row>
+    <Container>
+      <Row className="mt-4">
+        <Col md={9}>
+          <PostList />
+        </Col>
+        <Col md={3}>
+          <InfoCard />
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
