@@ -15,7 +15,7 @@ const PostList = () => {
   console.log(display);
 
   return (
-    <Container>
+    <Container className="posts-container">
       {display.map((row, index) => (
         <Row key={index}>
           {row.map((post) => (

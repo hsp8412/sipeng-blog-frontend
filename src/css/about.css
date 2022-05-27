@@ -1,0 +1,25 @@
+.greeting-text{
+    font-family:Roboto,sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--textGray)
+}
+
+.greeting-title{
+    font-family: Roboto,sans-serif;
+    color: var(--darkGray);
+}
+
+.greeting-card{
+    text-align: left;
+}
+
+.greeting-highlight{
+    color:red;
+    font-weight: bold;
+}
+
+.greeting-email{
+    text-align: center;
+}

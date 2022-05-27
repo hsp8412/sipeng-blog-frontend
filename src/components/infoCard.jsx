@@ -1,17 +1,37 @@
-import React from 'react';
+import React from "react";
+import "../css/infoCard.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  solid,
+  brands,
+  regular,
+} from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const InfoCard = () => {
-    return (
-        <div>
-            <div className="card">
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" className="btn btn-primary">Button</a>
-                </div>
-            </div>
+  return (
+    <div className="card d-flex flex-column">
+      <div className="card-body">
+        <img src="/avatar.gif" alt="avatar" className="avatar" />
+        <h3>Sipeng He</h3>
+        <h5>Computer Science Student at the University of Calgary</h5>
+        <p>Email: sipeng.he@ucalgary.ca</p>
+        <div className="icons d-flex justify-content-center gap-2 mt-2">
+          <a href="" className="icon-link">
+            <FontAwesomeIcon icon={brands("linkedin")} size="2x" />
+          </a>
+          <a href="" className="icon-link">
+            <FontAwesomeIcon icon={brands("github-square")} size="2x" />
+          </a>
+          <a href="" className="icon-link">
+            <FontAwesomeIcon icon={brands("facebook-square")} size="2x" />
+          </a>
+          <a href="" className="icon-link">
+            <FontAwesomeIcon icon={brands("instagram-square")} size="2x" />
+          </a>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default InfoCard;

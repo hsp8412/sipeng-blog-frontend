@@ -1,7 +1,8 @@
 
 :root{
   --darkGray: rgba(55,65,81,1);
-  --lightGray: rgba(229,231,235,1)
+  --lightGray: rgba(229,231,235,1);
+  --textGray: #6b7280
 }
 
 
