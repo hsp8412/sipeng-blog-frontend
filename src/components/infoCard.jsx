@@ -16,21 +16,41 @@ const InfoCard = () => {
         <h5>Computer Science Student at the University of Calgary</h5>
         <div>
           Email:{" "}
-          <a href="mailto:sipeng.he@ucalgary.ca" className="info-email">
+          <a
+            href="mailto:sipeng.he@ucalgary.ca"
+            target="_blank"
+            className="info-email"
+          >
             sipeng.he@ucalgary.ca
           </a>{" "}
         </div>
         <div className="icons d-flex justify-content-center gap-2 mt-2">
-          <a href="" className="icon-link">
+          <a
+            href="https://www.linkedin.com/in/sipeng-he-250654190/"
+            target="_blank"
+            className="icon-link"
+          >
             <FontAwesomeIcon icon={brands("linkedin")} size="2x" />
           </a>
-          <a href="" className="icon-link">
+          <a
+            href="https://github.com/hsp8412"
+            target="_blank"
+            className="icon-link"
+          >
             <FontAwesomeIcon icon={brands("github-square")} size="2x" />
           </a>
-          <a href="" className="icon-link">
+          <a
+            href="https://www.facebook.com/profile.php?id=100015661125991"
+            target="_blank"
+            className="icon-link"
+          >
             <FontAwesomeIcon icon={brands("facebook-square")} size="2x" />
           </a>
-          <a href="" className="icon-link">
+          <a
+            href="https://www.instagram.com/hsp_steven/"
+            target="_blank"
+            className="icon-link"
+          >
             <FontAwesomeIcon icon={brands("instagram-square")} size="2x" />
           </a>
         </div>

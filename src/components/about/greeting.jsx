@@ -42,6 +42,7 @@ const GreetingCard = () => {
           <div className="d-flex justify-content-center">
             <a
               href="mailto:sipeng.he@ucalgary.ca"
+              target="_blank"
               className="d-flex info-email"
             >
               sipeng.he@ucalgary.ca

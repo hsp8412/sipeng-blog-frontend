@@ -13,3 +13,9 @@
 .contact-email:hover{
     color:var(--darkGray)
 }
+
+.contact-img{
+    width: 100%;
+    height: auto;
+    max-width: 35rem;
+}

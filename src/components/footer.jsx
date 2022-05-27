@@ -10,33 +10,49 @@ const Footer = () => {
       <div>
         <ul className="d-flex justify-content-center p-0 gap-4 footer-nav">
           <li className="d-inline ">
-            <a href="" className="footer-nav-item">
+            <a href="/" className="footer-nav-item">
               Home
             </a>
           </li>
           <li className="d-inline">
-            <a href="" className="footer-nav-item">
+            <a href="/about" className="footer-nav-item">
               About
             </a>
           </li>
           <li className="d-inline">
-            <a href="" className="footer-nav-item">
+            <a href="/contact" className="footer-nav-item">
               Contact
             </a>
           </li>
         </ul>
       </div>
       <div className="icons d-flex justify-content-center gap-2 mt-2">
-        <a href="" className="footer-link">
+        <a
+          href="https://www.linkedin.com/in/sipeng-he-250654190/"
+          target="_blank"
+          className="footer-link"
+        >
           <FontAwesomeIcon icon={brands("linkedin")} size="2x" />
         </a>
-        <a href="" className="footer-link">
+        <a
+          href="https://github.com/hsp8412"
+          target="_blank"
+          className="footer-link"
+        >
           <FontAwesomeIcon icon={brands("github-square")} size="2x" />
         </a>
-        <a href="" className="footer-link">
+        <a
+          href="https://www.facebook.com/profile.php?id=100015661125991"
+          target="_blank"
+          className="footer-link"
+        >
           <FontAwesomeIcon icon={brands("facebook-square")} size="2x" />
         </a>
-        <a href="" className="footer-link">
+        <a
+          href="https://www.instagram.com/hsp_steven/"
+          target="_blank"
+          className="footer-link"
+        >
           <FontAwesomeIcon icon={brands("instagram-square")} size="2x" />
         </a>
       </div>
