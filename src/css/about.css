@@ -1,4 +1,4 @@
-.greeting-text{
+.about-text{
     font-family:Roboto,sans-serif;
     font-weight: 500;
     font-size: 18px;
@@ -6,12 +6,12 @@
     color: var(--textGray)
 }
 
-.greeting-title{
+.about-title{
     font-family: Roboto,sans-serif;
     color: var(--darkGray);
 }
 
-.greeting-card{
+.about-card{
     text-align: left;
 }
 
@@ -22,4 +22,11 @@
 
 .greeting-email{
     text-align: center;
+}
+
+.project-url{
+    display: inline;
+    font-family:Roboto,sans-serif;
+    font-weight: 500;
+    color: var(--darkGray)
 }

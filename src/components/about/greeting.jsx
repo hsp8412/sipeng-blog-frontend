@@ -16,18 +16,19 @@ const GreetingCard = () => {
 
   return (
     <div className="card">
-      <div className="card-body greeting-card">
+      <div className="card-body about-card">
         {/*<ReactMarkdown>{text}</ReactMarkdown>*/}
-        <h2 className="greeting-title">Who am I?</h2>
-        <div className="greeting-text mt-4">
+        <h2 className="about-title">Who am I?</h2>
+        <div className="about-text mt-4">
           <p>
-            Hi! I'm Sipeng He(何斯鹏), an undergraduate student from the
+            Hi! I'm Sipeng He(何斯鹏), an undergraduate student at the
             University of Calgary.
           </p>
           <p>
-            Grown up in Shenzhen, China, I moved to Calgary a year ago and
+            Growing up in Shenzhen, China, I moved to Calgary a year ago and
             totally fell in love with this city. Canada is such a fascinating
-            country.
+            country with the breath-taking natural sceneries and the diverse
+            culture.
           </p>
           <p>
             I want to become a developer not only because it is{" "}
@@ -39,7 +40,7 @@ const GreetingCard = () => {
             about me, please don't hesitate to contact me at:
           </p>
           <p className="greeting-email">sipeng.he@ucalgary.ca</p>
-          <p>Hope to see you soon.</p>
+          <p>I'm looking forward to your email ^_^</p>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import AboutContent from "../components/about/aboutContent";
 
 const About = () => {
   return (
-    <div>
+    <div className="mt-4">
       <Container>
         <Row>
           <Col md={9}>
