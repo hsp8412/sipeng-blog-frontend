@@ -1,17 +1,17 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import InfoCard from "../components/infoCard";
-import AboutContent from "../components/about/aboutContent";
+import ContactInfo from "../components/contactInfo";
 
-const About = () => {
+const Contact = () => {
   return (
     <div className="mt-4">
       <Container>
         <Row>
-          <Col md={9} xs={12}>
-            <AboutContent />
+          <Col md={9}>
+            <ContactInfo />
           </Col>
-          <Col md={3} xs={12}>
+          <Col md={3}>
             <InfoCard />
           </Col>
         </Row>
@@ -20,4 +20,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Contact;

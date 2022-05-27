@@ -39,8 +39,15 @@ const GreetingCard = () => {
             If you are interested in my projects, or just want to know more
             about me, please don't hesitate to contact me at:
           </p>
-          <p className="greeting-email">sipeng.he@ucalgary.ca</p>
-          <p>I'm looking forward to your email ^_^</p>
+          <div className="d-flex justify-content-center">
+            <a
+              href="mailto:sipeng.he@ucalgary.ca"
+              className="d-flex info-email"
+            >
+              sipeng.he@ucalgary.ca
+            </a>
+          </div>
+          <p className="mt-3">I'm looking forward to your email ^_^</p>
         </div>
       </div>
     </div>

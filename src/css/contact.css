@@ -1,0 +1,15 @@
+.contact-link{
+    text-decoration: none;
+}
+
+.contact-link:hover{
+    color: var(--darkGray);
+}
+
+.contact-email{
+    text-decoration: none;
+}
+
+.contact-email:hover{
+    color:var(--darkGray)
+}

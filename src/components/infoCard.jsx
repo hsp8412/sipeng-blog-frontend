@@ -14,7 +14,12 @@ const InfoCard = () => {
         <img src="/avatar.gif" alt="avatar" className="avatar" />
         <h3>Sipeng He</h3>
         <h5>Computer Science Student at the University of Calgary</h5>
-        <p>Email: sipeng.he@ucalgary.ca</p>
+        <div>
+          Email:{" "}
+          <a href="mailto:sipeng.he@ucalgary.ca" className="info-email">
+            sipeng.he@ucalgary.ca
+          </a>{" "}
+        </div>
         <div className="icons d-flex justify-content-center gap-2 mt-2">
           <a href="" className="icon-link">
             <FontAwesomeIcon icon={brands("linkedin")} size="2x" />

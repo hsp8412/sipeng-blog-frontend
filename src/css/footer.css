@@ -1,0 +1,29 @@
+.footer-nav{
+    font-family: Roboto,sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.footer-nav-item{
+    text-decoration: none;
+    color: var(--textGray);
+}
+
+.footer-nav-item:hover{
+    color: var(--darkGray);
+}
+
+.footer-link{
+    color: var(--textGray);
+}
+
+.footer-link:hover{
+    color: var(--darkGray);
+}
+
+.footer-copyright{
+    color: var(--darkGray);
+    font-family: Roboto,sans-serif;
+    font-weight: bold;
+}

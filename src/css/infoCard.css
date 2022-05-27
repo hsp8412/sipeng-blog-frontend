@@ -11,3 +11,12 @@
 .icon-link{
     color: var(--darkGray);
 }
+
+.info-email{
+    color: var(--textGray);
+    text-decoration: none;
+}
+
+.info-email:hover{
+    color: var(--darkGray)
+}
