@@ -1,23 +1,16 @@
 import React from "react";
 import "../../css/post.css";
-import Ellipsis from "react-ellipsis-component";
 
-const Post = ({ post }) => {
+const Post = () => {
   return (
     <div className="card post-card mb-3">
-      <img className="card-img-top" src={post.coverImg} alt="Card image cap" />
-      <div className="card-body post-card-content">
-        <a href={`/post/${post.id}`} className="post-title-link">
-          <h5 className="card-title">{post.title}</h5>
-        </a>
-        <Ellipsis
-          text={post.preview}
-          maxLine={5}
-          reflowOnResize={true}
-          className="post-preview my-2"
-        />
-        <a href={`/post/${post.id}`} className="post-link">
-          Read more
+      <div className="card-body">
+        <h5 className="card-title">Card title</h5>
+        <p className="card-text">
+          With supporting text below as a natural lead-in to additional content.
+        </p>
+        <a href="#" className="btn btn-primary">
+          Button
         </a>
       </div>
     </div>

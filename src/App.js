@@ -6,7 +6,6 @@ import About from "./pages/About";
 import Footer from "./components/footer";
 import { Container } from "react-bootstrap";
 import Contact from "./pages/Contact";
-import Post from "./pages/Post";
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/post/:id" element={<Post />} />
       </Routes>
       <Footer />
     </div>
