@@ -1,3 +1,60 @@
 .post-card{
-    height: 170px;
+    height: 500px;
+}
+
+.post-preview{
+    font-family: Roboto,sans-serif;
+    font-weight: 500;
+    color:var(--textGray)
+}
+
+.post-card-content{
+    font-family: Roboto,sans-serif;
+    text-align: left;
+}
+
+.post-link{
+    text-align: left;
+    text-decoration: none;
+    color: var(--textGray);
+}
+
+.post-title-link{
+    text-decoration: none;
+    color:var(--darkGray)
+}
+
+.post-title-link:hover{
+    color:var(--darkGray);
+    text-decoration:underline;
+}
+
+.post-link:hover{
+    color:var(--darkGray)
+}
+
+.post-info-author{
+    font-family: Roboto,sans-serif;
+    font-weight: 700;
+    color: darkblue;
+    font-size: 20px;
+}
+
+.post-info-date{
+    font-family: Roboto,sans-serif;
+    font-weight: 700;
+    font-size:20px
+}
+
+.post-avatar{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.post-content p{
+    font-family: Roboto,sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--textGray)
 }
