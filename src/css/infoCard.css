@@ -9,6 +9,10 @@
 }
 
 .icon-link{
+    color: var(--textGray);
+}
+
+.icon-link:hover{
     color: var(--darkGray);
 }
 
