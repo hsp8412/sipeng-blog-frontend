@@ -45,9 +45,6 @@ export const getPosts = () => {
 };
 
 export const getPostById = (id) => {
-  console.log(id);
-  console.log(posts);
   const result = posts.find((post) => post.id == id);
-  console.log(result);
   return result;
 };
