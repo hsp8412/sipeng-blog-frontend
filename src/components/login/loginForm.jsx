@@ -2,7 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Button, Card, Container, Form } from "react-bootstrap";
-import { login } from "../../services/authService";
+import { login } from "../../service/authService";
 
 const LoginForm = ({ setInvalidShow }) => {
   const formik = useFormik({

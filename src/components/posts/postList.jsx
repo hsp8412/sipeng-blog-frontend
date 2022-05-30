@@ -8,7 +8,12 @@ const PostList = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    setPosts(getPosts());
+    const fetchPosts = async () => {
+      const res = await getPosts();
+      console.log(res.data);
+      setPosts(res.data);
+    };
+    fetchPosts();
   }, []);
 
   let display = _.chunk(posts, 2);

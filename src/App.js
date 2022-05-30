@@ -8,6 +8,7 @@ import { Container } from "react-bootstrap";
 import Contact from "./pages/Contact";
 import Post from "./pages/Post";
 import Login from "./pages/Login";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/admin" element={<Login />} />
       </Routes>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

@@ -12,12 +12,15 @@ const Post = () => {
   const [author, setAuthor] = useState({});
 
   useEffect(() => {
-    console.log(id);
-    const post = getPostById(id);
-    setPost(post);
-    console.log(post);
-    const author = getUserById(post.userId);
-    setAuthor(author);
+    const fetchPost = async () => {
+      console.log(id);
+      const post = await getPostById(id);
+      console.log(post.data);
+      setPost(post.data);
+      const author = await getUserById(post.data.userId);
+      setAuthor(author.data);
+    };
+    fetchPost();
   }, []);
 
   return (
