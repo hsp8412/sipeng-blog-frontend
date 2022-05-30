@@ -23,6 +23,5 @@ export function register(user) {
 }
 
 export function getUserById(id) {
-  console.log(id);
   return http.get(`${apiEndpoint}/${id}`);
 }

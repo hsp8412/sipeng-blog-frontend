@@ -28,14 +28,12 @@ const LoginForm = ({ setInvalidShow }) => {
       password: Yup.string().required("Password is required."),
       rememberMe: Yup.boolean(),
     }),
-
-    validateOnChange: false,
     validateOnBlur: false,
   });
 
   return (
-    <Container className="login-container d-flex align-items-center justify-content-center">
-      <Card className="login-card my-5">
+    <Container className="login-container d-flex  justify-content-center">
+      <Card className="login-card my-5" style={{ width: "500px" }}>
         <Card.Body>
           <h1 className="mb-3">Sign in</h1>
           <Form onSubmit={formik.handleSubmit}>
@@ -66,14 +64,9 @@ const LoginForm = ({ setInvalidShow }) => {
               </Form.Text>
             </Form.Group>
             <Button variant="primary" type="submit">
-              Submit
+              Sign In
             </Button>
           </Form>
-          <div className="mt-2">
-            <a href="/register" className="register-link">
-              Register
-            </a>
-          </div>
         </Card.Body>
       </Card>
     </Container>

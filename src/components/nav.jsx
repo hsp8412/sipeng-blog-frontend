@@ -12,8 +12,8 @@ const MyNav = () => {
   };
 
   const renderMenuIcon = () => {
-    if (!showMenu) return <FontAwesomeIcon icon={solid("bars")} size="x" />;
-    return <FontAwesomeIcon icon={solid("xmark")} size="1x" />;
+    if (!showMenu) return <FontAwesomeIcon icon={solid("bars")} />;
+    return <FontAwesomeIcon icon={solid("xmark")} />;
   };
 
   return (

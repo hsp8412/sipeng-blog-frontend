@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Post from "./pages/Post";
 import Login from "./pages/Login";
 import { ToastContainer } from "react-toastify";
+import ManagePosts from "./pages/ManagePosts";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/post/:id" element={<Post />} />
-        <Route path="/admin" element={<Login />} />
+        <Route path="/admin/login" element={<Login />} />
+        <Route path="/admin" element={<ManagePosts />} />
       </Routes>
       <Footer />
       <ToastContainer />
