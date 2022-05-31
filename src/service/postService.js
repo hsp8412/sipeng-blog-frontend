@@ -50,6 +50,7 @@
 // };
 
 import http from "./httpService";
+import { getUserById } from "./userService";
 const apiUrl = process.env.REACT_APP_URL_BASE;
 
 const apiEndpoint = apiUrl + "/post";
@@ -60,6 +61,17 @@ function postUrl(id) {
 
 export function getPosts() {
   return http.get(apiEndpoint);
+}
+
+export async function getPostsAndAuthor() {
+  const res = await http.get(apiEndpoint);
+  let posts = [...res.data];
+  for (let post of posts) {
+    const res = await getUserById(post.userId);
+    post.username = res.data.username;
+  }
+  console.log(posts);
+  return posts;
 }
 
 export function getPostById(postId) {

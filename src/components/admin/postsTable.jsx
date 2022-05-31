@@ -4,6 +4,10 @@ import { Button } from "react-bootstrap";
 import MyTable from "./myTable";
 
 const PostsTable = ({ posts, onSort, onDelete, onEdit, sortColumn }) => {
+  posts.forEach((post) => {
+    console.log(post);
+    console.log(post.username);
+  });
   const columns = [
     {
       path: "title",
@@ -15,8 +19,8 @@ const PostsTable = ({ posts, onSort, onDelete, onEdit, sortColumn }) => {
       ),
     },
     { path: "username", label: "Author" },
-    { path: "createDate", label: "Create Date" },
-    { path: "updateDate", label: "Update Date" },
+    { path: "createDate", label: "Create Date", date: true },
+    { path: "updateDate", label: "Update Date", date: true },
     {
       key: "edit",
       content: (post) => (

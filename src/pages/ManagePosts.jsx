@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { deletePost, getPosts } from "../service/postService";
+import {
+  deletePost,
+  getPosts,
+  getPostsAndAuthor,
+} from "../service/postService";
 import { getUserById } from "../service/userService";
 import PostsTable from "../components/admin/postsTable";
 import { paginate } from "../utils/paginate";
@@ -13,8 +17,17 @@ const ManagePosts = () => {
   const [pageSize, setPageSize] = useState(4);
   const [sortColumn, setSortColumn] = useState({ path: "title", order: "asc" });
 
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const posts = await getPostsAndAuthor();
+      setPosts(posts);
+    };
+    fetchPosts();
+  }, []);
+
   const sorted = _.orderBy(posts, [sortColumn.path], [sortColumn.order]);
   const postsToDisplay = paginate(sorted, currentPage, pageSize);
+  console.log(postsToDisplay);
   const totalCount = posts.length;
 
   const handleSort = (sortColumn) => {
@@ -38,19 +51,6 @@ const ManagePosts = () => {
   const handleEdit = () => {};
 
   const handlePageChange = () => {};
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const res = await getPosts();
-      let posts = res.data;
-      posts.map(async (post) => {
-        const res = await getUserById(post.userId);
-        post.username = res.data.username;
-      });
-      setPosts(posts);
-    };
-    fetchPosts();
-  }, []);
 
   if (totalCount === 0)
     return <p className="text">There is no post to be shown.</p>;
