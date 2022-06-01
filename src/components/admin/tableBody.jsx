@@ -17,9 +17,6 @@ const TableBody = ({ data, columns }) => {
     return item._id + (column.path || column.key);
   };
 
-  if (!data[0].username) {
-  }
-
   return (
     <tbody>
       {data.map((item) => (

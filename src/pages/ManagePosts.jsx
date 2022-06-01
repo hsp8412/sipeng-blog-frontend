@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
-import {
-  deletePost,
-  getPosts,
-  getPostsAndAuthor,
-} from "../service/postService";
-import { getUserById } from "../service/userService";
+import { deletePost, getPostsAndAuthor } from "../service/postService";
 import PostsTable from "../components/admin/postsTable";
 import { paginate } from "../utils/paginate";
 import { toast } from "react-toastify";
 import _ from "lodash";
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
+import MyPagination from "../components/admin/pagination";
+import { Link } from "react-router-dom";
 
 const ManagePosts = () => {
   const [posts, setPosts] = useState([]);
@@ -50,7 +47,9 @@ const ManagePosts = () => {
 
   const handleEdit = () => {};
 
-  const handlePageChange = () => {};
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
 
   if (totalCount === 0)
     return <p className="text">There is no post to be shown.</p>;
@@ -64,6 +63,15 @@ const ManagePosts = () => {
         onSort={handleSort}
         onEdit={handleEdit}
       />
+      <MyPagination
+        currentPage={currentPage}
+        itemsCount={totalCount}
+        pageSize={pageSize}
+        onPageChange={handlePageChange}
+      />
+      <Link to="/new-post">
+        <Button variant="primary">New post</Button>
+      </Link>
     </Container>
   );
 };
