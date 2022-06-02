@@ -6,7 +6,7 @@ const PostContent = ({ post, author }) => {
   console.log(author);
   return (
     <div>
-      <h2>{post.title}</h2>
+      <h1 className="post-title">{post.title}</h1>
       <div className="d-flex align-content-start mt-3">
         <img src={author.avatarUrl} alt="avatar" className="post-avatar" />
         <div className="d-flex flex-column align-items-start justify-content-center mx-3">

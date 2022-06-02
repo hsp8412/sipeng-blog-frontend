@@ -3,7 +3,6 @@ import _ from "lodash";
 import dayjs from "dayjs";
 
 const TableBody = ({ data, columns }) => {
-  console.log(data);
   const renderCell = (item, column) => {
     if (column.content) return column.content(item);
     else if (!column.date) return _.get(item, column.path);

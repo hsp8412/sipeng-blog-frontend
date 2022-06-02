@@ -78,13 +78,15 @@ export function getPostById(postId) {
   return http.get(postUrl(postId));
 }
 
-export function savePost(post) {
-  if (post.id) {
-    const body = { ...post };
-    delete body.id;
-    return http.put(postUrl(post.id), body);
-  }
+export function createPost(post) {
+  // if (post.id) {
+  //
+  // }
   return http.post(apiEndpoint, post);
+}
+
+export function updatePost(post, id) {
+  return http.put(postUrl(id), post);
 }
 
 export function deletePost(postId) {

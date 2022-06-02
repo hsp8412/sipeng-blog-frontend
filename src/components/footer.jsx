@@ -6,7 +6,7 @@ import "../css/footer.css";
 const Footer = () => {
   return (
     <div className="d-flex flex-column py-5">
-      <hr />
+      <hr className="footer-line" />
       <div>
         <ul className="d-flex justify-content-center p-0 gap-4 footer-nav">
           <li className="d-inline ">

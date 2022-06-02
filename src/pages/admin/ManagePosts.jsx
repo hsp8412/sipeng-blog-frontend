@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { deletePost, getPostsAndAuthor } from "../service/postService";
-import PostsTable from "../components/admin/postsTable";
-import { paginate } from "../utils/paginate";
+import { deletePost, getPostsAndAuthor } from "../../service/postService";
+import PostsTable from "../../components/admin/postsTable";
+import { paginate } from "../../utils/paginate";
 import { toast } from "react-toastify";
 import _ from "lodash";
 import { Button, Container } from "react-bootstrap";
-import MyPagination from "../components/admin/pagination";
+import MyPagination from "../../components/admin/pagination";
 import { Link } from "react-router-dom";
+import DeleteConfirm from "../../components/admin/deleteConfirm";
+import { logout } from "../../service/authService";
 
 const ManagePosts = () => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(4);
   const [sortColumn, setSortColumn] = useState({ path: "title", order: "asc" });
+  const [postDeleting, setPostDeleting] = useState(null);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -31,21 +35,33 @@ const ManagePosts = () => {
     setSortColumn(sortColumn);
   };
 
-  const handleDelete = async (post) => {
-    const originalPosts = posts;
-    const updatedPosts = originalPosts.filter((p) => p._id !== post._id);
-    setPosts(updatedPosts);
+  const handleDelete = (post) => {
+    setPostDeleting(post);
+    setShowDeleteModal(true);
+  };
 
+  const handleLogOut = () => {
+    logout();
+    window.location = "/login";
+  };
+
+  const handleConfirmDelete = async () => {
     try {
-      await deletePost(post._id);
+      await deletePost(postDeleting._id);
+      window.location.reload();
+      toast.success("The post has been deleted.");
     } catch (ex) {
-      if (ex.response && ex.response.status === 404)
-        toast.error("This movie has already been deleted.");
-      setPosts(updatedPosts);
+      toast("An error occurs when deleting the post.");
     }
   };
 
-  const handleEdit = () => {};
+  const handleModalClose = () => {
+    setShowDeleteModal(false);
+  };
+
+  const handleEdit = (post) => {
+    window.location = `/admin/post/${post._id}`;
+  };
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -69,9 +85,17 @@ const ManagePosts = () => {
         pageSize={pageSize}
         onPageChange={handlePageChange}
       />
-      <Link to="/new-post">
-        <Button variant="primary">New post</Button>
+      <Link to="/admin/new-post">
+        <Button variant="primary">New Post</Button>
       </Link>
+      <Button variant="warning mx-2" onClick={handleLogOut}>
+        Log Out
+      </Button>
+      <DeleteConfirm
+        show={showDeleteModal}
+        handleClose={handleModalClose}
+        handleConfirmDelete={handleConfirmDelete}
+      />
     </Container>
   );
 };

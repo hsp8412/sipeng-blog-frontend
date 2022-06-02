@@ -27,3 +27,7 @@
     font-family: Roboto,sans-serif;
     font-weight: bold;
 }
+
+.footer-line{
+    color: var(--textGray);
+}

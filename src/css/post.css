@@ -52,9 +52,28 @@
     border-radius: 50%;
 }
 
-.post-content p{
+.post-title{
+    color:var(--darkGray)
+}
+
+.post-content{
     font-family: Roboto,sans-serif;
+}
+
+.post-content p{
     font-weight: 500;
     font-size: 20px;
     color: var(--textGray)
+}
+
+.post-content h1{
+    color:var(--darkGray)
+}
+
+.post-content h2{
+    color:var(--darkGray)
+}
+
+.post-content h3{
+    color:var(--darkGray)
 }

@@ -4,10 +4,6 @@ import { Button } from "react-bootstrap";
 import MyTable from "./myTable";
 
 const PostsTable = ({ posts, onSort, onDelete, onEdit, sortColumn }) => {
-  posts.forEach((post) => {
-    console.log(post);
-    console.log(post.username);
-  });
   const columns = [
     {
       path: "title",

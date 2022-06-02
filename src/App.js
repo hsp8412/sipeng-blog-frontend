@@ -9,8 +9,10 @@ import Contact from "./pages/Contact";
 import Post from "./pages/Post";
 import Login from "./pages/Login";
 import { ToastContainer } from "react-toastify";
-import ManagePosts from "./pages/ManagePosts";
-import NewPost from "./components/admin/newPost";
+import NewPost from "./pages/admin/NewPost";
+import ProtectedRoute from "./components/protectedRoute";
+import EditPost from "./pages/admin/EditPost";
+import ManagePosts from "./pages/admin/ManagePosts";
 
 function App() {
   return (
@@ -21,12 +23,14 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/post/:id" element={<Post />} />
-        <Route path="/admin/login" element={<Login />} />
-        <Route path="/admin" element={<ManagePosts />} />
-        <Route path="/new-post" element={<NewPost />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<ProtectedRoute />}>
+          <Route path="/admin/posts" element={<ManagePosts />} />
+          <Route path="/admin/new-post" element={<NewPost />} />
+          <Route path="/admin/post/:id" element={<EditPost />} />
+        </Route>
       </Routes>
       <Footer />
-      <ToastContainer />
     </div>
   );
 }

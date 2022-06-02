@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Button, Card, Container, Form } from "react-bootstrap";
 import { login } from "../../service/authService";
+import { toast } from "react-toastify";
 
 const LoginForm = ({ setInvalidShow }) => {
   const formik = useFormik({
@@ -14,10 +15,12 @@ const LoginForm = ({ setInvalidShow }) => {
       try {
         await login(email, password);
         resetForm();
-        window.location = "/";
-      } catch (error) {
-        setInvalidShow(true);
-        resetForm();
+        window.location = "/admin/posts";
+      } catch (ex) {
+        if (ex.response && ex.response.status === 400) {
+          setInvalidShow(true);
+          resetForm();
+        }
       }
     },
 
@@ -29,13 +32,14 @@ const LoginForm = ({ setInvalidShow }) => {
       rememberMe: Yup.boolean(),
     }),
     validateOnBlur: false,
+    validateOnChange: false,
   });
 
   return (
     <Container className="login-container d-flex  justify-content-center">
-      <Card className="login-card my-5" style={{ width: "500px" }}>
+      <Card className="text-start my-5" style={{ width: "500px" }}>
         <Card.Body>
-          <h1 className="mb-3">Sign in</h1>
+          <h1 className="mb-3 text-center mb-4 mt-2">Sign in</h1>
           <Form onSubmit={formik.handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
@@ -43,6 +47,7 @@ const LoginForm = ({ setInvalidShow }) => {
                 type="email"
                 name="email"
                 onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
                 value={formik.values.email}
                 placeholder="Enter email"
               />
@@ -56,6 +61,7 @@ const LoginForm = ({ setInvalidShow }) => {
                 type="password"
                 name="password"
                 onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
                 value={formik.values.password}
                 placeholder="Password"
               />
