@@ -77,3 +77,37 @@
 .post-content h3{
     color:var(--darkGray)
 }
+
+.filter-button{
+    font-family: Roboto,sans-serif;
+    font-weight: bold;
+    background-color: var(--darkGray);
+    color: white;
+    border: none;
+    padding: 4px 18px;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+
+.filter-active{
+    background-color: forestgreen;
+}
+
+.filter-button:hover{
+    background-color: forestgreen;
+}
+
+.filter-clear-button{
+    font-family: Roboto,sans-serif;
+    font-weight: bold;
+    background-color: deepskyblue;
+    color: white;
+    border: none;
+    padding: 4px 18px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.filter-clear-button:hover{
+    background-color: blue;
+}
