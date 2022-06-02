@@ -1,5 +1,5 @@
 .post-card{
-    height: 500px;
+    height: 520px;
 }
 
 .post-preview{
@@ -110,4 +110,16 @@
 
 .filter-clear-button:hover{
     background-color: blue;
+}
+
+.post-tag{
+    font-family: Roboto,sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: lightgoldenrodyellow;
+    color: var(--darkGray);
+    border: none;
+    padding: 2px 10px;
+    border-radius: 30px;
+    transition: 0.3s;
 }

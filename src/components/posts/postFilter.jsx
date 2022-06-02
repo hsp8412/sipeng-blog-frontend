@@ -1,32 +1,43 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
+import _ from "lodash";
+import { Row } from "react-bootstrap";
 
-const PostFilter = ({ setActiveFilter, activeFilter }) => {
+const PostFilter = ({ setActiveFilter, activeFilter, tags }) => {
+  const display = _.chunk(tags, 2);
+  console.log(display);
   return (
     <div className="card d-flex flex-column mt-3">
       <div className="card-body d-flex flex-column">
-        <div className="d-flex justify-content-center">
-          <button
-            className={`filter-button mx-2 ${
-              activeFilter === "react" ? "filter-active" : ""
-            }`}
-            onClick={() => {
-              setActiveFilter("react");
-            }}
-          >
-            React
-          </button>
-          <button
-            className={`filter-button mx-2 ${
-              activeFilter === "test" ? "filter-active" : ""
-            }`}
-            onClick={() => {
-              setActiveFilter("test");
-            }}
-          >
-            Test
-          </button>
+        <div className="d-flex flex-column justify-content-center">
+          {display.map((row, index) => (
+            <div className="mt-3" key={index}>
+              {row.map((tag, index) => (
+                <button
+                  key={index}
+                  className={`filter-button d-inline mx-2 ${
+                    activeFilter === tag ? "filter-active" : ""
+                  }`}
+                  onClick={() => {
+                    setActiveFilter(tag);
+                  }}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
+          ))}
+          {/*{tags.map((tag) => (*/}
+          {/*  <button*/}
+          {/*    className={`filter-button mx-2 ${*/}
+          {/*      activeFilter === tag ? "filter-active" : ""*/}
+          {/*    }`}*/}
+          {/*    onClick={() => {*/}
+          {/*      setActiveFilter(tag);*/}
+          {/*    }}*/}
+          {/*  >*/}
+          {/*    {tag}*/}
+          {/*  </button>*/}
+          {/*))}*/}
         </div>
         <div>
           <button

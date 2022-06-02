@@ -6,10 +6,14 @@ import "../css/home.css";
 import { getPosts } from "../service/postService";
 import _ from "lodash";
 import PostFilter from "../components/posts/postFilter";
+import MyPagination from "../components/admin/pagination";
+import { paginate } from "../utils/paginate";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
   const [activeFilter, setActiveFilter] = useState(null);
+  const [activePage, setActivePage] = useState(1);
+  const [pageSize, setPageSize] = useState(4);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -19,6 +23,20 @@ const Home = () => {
     };
     fetchPosts();
   }, []);
+
+  const getTags = () => {
+    let tags = [];
+    posts.map((post) => {
+      post.tags.forEach((tag) => {
+        if (!tags.includes(tag)) {
+          tags.push(tag);
+        }
+      });
+    });
+    return tags;
+  };
+
+  const tags = getTags();
 
   let filtered = posts;
 
@@ -30,20 +48,28 @@ const Home = () => {
     });
   }
 
-  let display = _.chunk(filtered, 2);
-  console.log(display);
+  const paginated = paginate(posts, activePage, pageSize);
+
+  let display = _.chunk(paginated, 2);
 
   return (
     <Container>
       <Row className="mt-4">
         <Col md={9}>
-          <PostList posts={display} />
+          <PostList posts={display} setActiveFilter={setActiveFilter} />
+          <MyPagination
+            currentPage={activePage}
+            pageSize={pageSize}
+            itemsCount={posts.length}
+            onPageChange={setActivePage}
+          />
         </Col>
         <Col md={3}>
           <InfoCard />
           <PostFilter
             setActiveFilter={setActiveFilter}
             activeFilter={activeFilter}
+            tags={tags}
           />
         </Col>
       </Row>
