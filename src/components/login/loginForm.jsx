@@ -3,7 +3,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Button, Card, Container, Form } from "react-bootstrap";
 import { login } from "../../service/authService";
-import { toast } from "react-toastify";
 
 const LoginForm = ({ setInvalidShow }) => {
   const formik = useFormik({

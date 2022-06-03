@@ -1,23 +1,10 @@
 import React, { useEffect, useState } from "react";
-import greetingText from "../text/greetingText.md";
-import ReactMarkdown from "react-markdown";
 import "../../css/about.css";
 
 const GreetingCard = () => {
-  const [text, setText] = useState("");
-
-  useEffect(() => {
-    fetch(greetingText)
-      .then((response) => response.text())
-      .then((text) => {
-        setText(text);
-      });
-  }, []);
-
   return (
     <div className="card">
       <div className="card-body about-card">
-        {/*<ReactMarkdown>{text}</ReactMarkdown>*/}
         <h2 className="about-title">Who am I?</h2>
         <div className="about-text mt-4">
           <p>
@@ -25,10 +12,10 @@ const GreetingCard = () => {
             University of Calgary.
           </p>
           <p>
-            Growing up in Shenzhen, China, I moved to Calgary a year ago and
-            totally fell in love with this city. Canada is such a fascinating
-            country with the breath-taking natural sceneries and the diverse
-            culture.
+            Growing up in Shenzhen, China, I'm attending university in Calgary
+            and totally fell in love with this city. Canada is such a
+            fascinating country with the breath-taking natural sceneries and the
+            diverse culture.
           </p>
           <p>
             I want to become a developer not only because it is{" "}

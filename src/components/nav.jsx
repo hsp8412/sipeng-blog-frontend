@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../css/nav.css";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 

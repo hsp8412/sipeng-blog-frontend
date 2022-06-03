@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import PostList from "../components/posts/postList";
 import InfoCard from "../components/infoCard";
-import "../css/home.css";
 import { getPosts } from "../service/postService";
 import _ from "lodash";
 import PostFilter from "../components/posts/postFilter";

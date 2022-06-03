@@ -1,17 +1,13 @@
 import React from "react";
 import "../css/infoCard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  solid,
-  brands,
-  regular,
-} from "@fortawesome/fontawesome-svg-core/import.macro";
+import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const InfoCard = () => {
   return (
     <div className="card d-flex flex-column">
       <div className="card-body">
-        <img src="/avatar.gif" alt="avatar" className="avatar" />
+        <img src="/avatar.JPG" alt="avatar" className="avatar" />
         <h3>Sipeng He</h3>
         <h5>Computer Science Student at the University of Calgary</h5>
         <div>

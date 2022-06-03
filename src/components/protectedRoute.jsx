@@ -1,5 +1,5 @@
 import React from "react";
-import { getAccessJwt, getCurrentUser } from "../service/authService";
+import { getAccessJwt } from "../service/authService";
 import { Navigate, Outlet } from "react-router-dom";
 
 const ProtectedRoute = ({ children, redirectPath = "/login" }) => {

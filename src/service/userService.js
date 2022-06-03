@@ -1,14 +1,3 @@
-// const users = [{
-//     id:1,
-//     name: "Sipeng He",
-//     avatarUrl: "/avatar.gif"
-// }]
-//
-// export const getUserById = (id)=>{
-//     return users.find(user=>user.id ===id)
-// }
-//
-
 import http from "./httpService";
 const apiUrl = process.env.REACT_APP_URL_BASE;
 

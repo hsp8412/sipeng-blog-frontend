@@ -1,6 +1,5 @@
 import React from "react";
 import _ from "lodash";
-import { Row } from "react-bootstrap";
 
 const PostFilter = ({ setActiveFilter, activeFilter, tags }) => {
   const display = _.chunk(tags, 2);
@@ -26,18 +25,6 @@ const PostFilter = ({ setActiveFilter, activeFilter, tags }) => {
               ))}
             </div>
           ))}
-          {/*{tags.map((tag) => (*/}
-          {/*  <button*/}
-          {/*    className={`filter-button mx-2 ${*/}
-          {/*      activeFilter === tag ? "filter-active" : ""*/}
-          {/*    }`}*/}
-          {/*    onClick={() => {*/}
-          {/*      setActiveFilter(tag);*/}
-          {/*    }}*/}
-          {/*  >*/}
-          {/*    {tag}*/}
-          {/*  </button>*/}
-          {/*))}*/}
         </div>
         <div>
           <button

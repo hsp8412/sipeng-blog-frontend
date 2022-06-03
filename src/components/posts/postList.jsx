@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { getPosts } from "../../service/postService";
-import _ from "lodash";
 import Post from "./post";
 
 const PostList = ({ posts, setActiveFilter }) => {
