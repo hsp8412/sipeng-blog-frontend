@@ -3,7 +3,6 @@ import ReactMarkdown from "react-markdown";
 import dayjs from "dayjs";
 
 const PostContent = ({ post, author }) => {
-  console.log(author);
   return (
     <div>
       <h1 className="post-title">{post.title}</h1>

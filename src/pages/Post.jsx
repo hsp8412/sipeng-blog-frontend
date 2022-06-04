@@ -6,7 +6,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import PostContent from "../components/posts/postContent";
 import InfoCard from "../components/infoCard";
 import { Utterances } from "utterances-react-component";
-import NotFound from "./notFound";
 
 const Post = () => {
   let { id } = useParams();
@@ -27,7 +26,7 @@ const Post = () => {
       }
     };
     fetchPost();
-  }, []);
+  }, [id]);
 
   return (
     <Container>

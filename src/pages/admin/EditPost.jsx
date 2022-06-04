@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { createPost, getPostById, updatePost } from "../../service/postService";
+import { getPostById, updatePost } from "../../service/postService";
 import { useFormik } from "formik";
 import { toast } from "react-toastify";
 import { Button, Card, Container, Form } from "react-bootstrap";
@@ -16,7 +16,6 @@ const EditPost = () => {
   });
 
   const getRawTags = (tags) => {
-    console.log(tags);
     let rawTags = "";
     if (!tags) return rawTags;
     tags.forEach((tag) => {
@@ -34,7 +33,7 @@ const EditPost = () => {
       getRawTags(post.data.tags);
     };
     fetchPost();
-  }, []);
+  }, [id]);
 
   const formik = useFormik({
     initialValues: {

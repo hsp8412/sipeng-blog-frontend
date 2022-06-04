@@ -28,7 +28,6 @@ const ManagePosts = () => {
 
   const sorted = _.orderBy(posts, [sortColumn.path], [sortColumn.order]);
   const postsToDisplay = paginate(sorted, currentPage, pageSize);
-  console.log(postsToDisplay);
   const totalCount = posts.length;
 
   const handleSort = (sortColumn) => {

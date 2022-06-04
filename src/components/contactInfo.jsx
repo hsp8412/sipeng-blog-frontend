@@ -12,6 +12,7 @@ const ContactInfo = () => {
           <a
             href="mailto:sipeng.he@ucalgary.ca"
             target="_blank"
+            rel="noopener"
             className="contact-email"
           >
             sipeng.he@ucalgary.ca

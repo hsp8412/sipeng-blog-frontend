@@ -19,7 +19,6 @@ export async function getPostsAndAuthor() {
     const res = await getUserById(post.userId);
     post.username = res.data.username;
   }
-  console.log(posts);
   return posts;
 }
 
@@ -28,9 +27,6 @@ export function getPostById(postId) {
 }
 
 export function createPost(post) {
-  // if (post.id) {
-  //
-  // }
   return http.post(apiEndpoint, post);
 }
 

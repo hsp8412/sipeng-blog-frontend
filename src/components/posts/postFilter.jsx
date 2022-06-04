@@ -1,9 +1,8 @@
 import React from "react";
 import _ from "lodash";
 
-const PostFilter = ({ setActiveFilter, activeFilter, tags }) => {
+const PostFilter = ({ onFilterSelected, activeFilter, tags }) => {
   const display = _.chunk(tags, 2);
-  console.log(display);
   return (
     <div className="card d-flex flex-column mt-3">
       <div className="card-body d-flex flex-column">
@@ -17,7 +16,7 @@ const PostFilter = ({ setActiveFilter, activeFilter, tags }) => {
                     activeFilter === tag ? "filter-active" : ""
                   }`}
                   onClick={() => {
-                    setActiveFilter(tag);
+                    onFilterSelected(tag);
                   }}
                 >
                   {tag}
@@ -29,7 +28,7 @@ const PostFilter = ({ setActiveFilter, activeFilter, tags }) => {
         <div>
           <button
             className="filter-clear-button mt-4"
-            onClick={() => setActiveFilter(null)}
+            onClick={() => onFilterSelected(null)}
           >
             Clear the filter
           </button>

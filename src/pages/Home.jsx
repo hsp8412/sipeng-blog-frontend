@@ -17,15 +17,19 @@ const Home = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       const res = await getPosts();
-      console.log(res.data);
       setPosts(res.data);
     };
     fetchPosts();
   }, []);
 
+  const handleFilterSelected = (filter)=>{
+    setActiveFilter(filter)
+    setActivePage(1)
+  }
+
   const getTags = () => {
     let tags = [];
-    posts.map((post) => {
+    posts.forEach((post) => {
       post.tags.forEach((tag) => {
         if (!tags.includes(tag)) {
           tags.push(tag);
@@ -66,7 +70,7 @@ const Home = () => {
           <Col md={3}>
             <InfoCard />
             <PostFilter
-                setActiveFilter={setActiveFilter}
+                onFilterSelected={handleFilterSelected}
                 activeFilter={activeFilter}
                 tags={tags}
             />

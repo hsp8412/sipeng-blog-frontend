@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
+import { Button, Card, Container, Form } from "react-bootstrap";
 import { useFormik } from "formik";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 import { getCurrentUser } from "../../service/authService";
@@ -29,7 +29,6 @@ const NewPost = () => {
         tags,
         userId: user._id,
       };
-      console.log(newPost);
       try {
         await createPost(newPost);
         resetForm();

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../../css/about.css";
 
 const GreetingCard = () => {
@@ -9,13 +9,7 @@ const GreetingCard = () => {
         <div className="about-text mt-4">
           <p>
             Hi! I'm Sipeng He(何斯鹏), an undergraduate student at the
-            University of Calgary.
-          </p>
-          <p>
-            Growing up in Shenzhen, China, I'm attending university in Calgary
-            and totally fell in love with this city. Canada is such a
-            fascinating country with the breath-taking natural sceneries and the
-            diverse culture.
+            University of Calgary. I love Canada because it is such a fascinating country with breath-taking natural sceneries and diverse culture.
           </p>
           <p>
             I want to become a developer not only because it is{" "}

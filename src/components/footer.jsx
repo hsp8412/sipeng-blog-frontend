@@ -51,6 +51,7 @@ const Footer = () => {
         <a
           href="https://www.instagram.com/hsp_steven/"
           target="_blank"
+          rel="noopener"
           className="footer-link"
         >
           <FontAwesomeIcon icon={brands("instagram-square")} size="2x" />

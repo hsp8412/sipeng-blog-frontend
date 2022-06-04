@@ -17,7 +17,7 @@ const MyNav = () => {
 
   return (
     <nav className="my-nav">
-      <a className="nav-logo">
+      <a className="nav-logo" href="/about">
         <FontAwesomeIcon icon={solid("earth-asia")} size="2x" />
       </a>
 
