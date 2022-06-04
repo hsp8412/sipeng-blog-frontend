@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Post from "./post";
 
-const PostList = ({ posts, setActiveFilter }) => {
+const PostList = ({ posts, onFilterSelected }) => {
   return (
     <Container className="posts-container">
       {posts.map((row, index) => (
@@ -12,7 +12,7 @@ const PostList = ({ posts, setActiveFilter }) => {
               <Post
                 key={post.id}
                 post={post}
-                setActiveFilter={setActiveFilter}
+                setActiveFilter={onFilterSelected}
               />
             </Col>
           ))}

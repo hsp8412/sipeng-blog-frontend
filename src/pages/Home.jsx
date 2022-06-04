@@ -63,7 +63,7 @@ const Home = () => {
       <Container>
         <Row className="mt-4">
           <Col md={9}>
-            <PostList posts={display} setActiveFilter={setActiveFilter} />
+            <PostList posts={display} onFilterSelected={handleFilterSelected} />
             <MyPagination
                 currentPage={activePage}
                 pageSize={pageSize}
