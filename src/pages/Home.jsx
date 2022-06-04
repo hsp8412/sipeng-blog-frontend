@@ -47,32 +47,32 @@ const Home = () => {
     });
   }
 
-  const paginated = paginate(posts, activePage, pageSize);
+  const paginated = paginate(filtered, activePage, pageSize);
 
   let display = _.chunk(paginated, 2);
 
   return (
-    <Container>
-      <Row className="mt-4">
-        <Col md={9}>
-          <PostList posts={display} setActiveFilter={setActiveFilter} />
-          <MyPagination
-            currentPage={activePage}
-            pageSize={pageSize}
-            itemsCount={posts.length}
-            onPageChange={setActivePage}
-          />
-        </Col>
-        <Col md={3}>
-          <InfoCard />
-          <PostFilter
-            setActiveFilter={setActiveFilter}
-            activeFilter={activeFilter}
-            tags={tags}
-          />
-        </Col>
-      </Row>
-    </Container>
+      <Container>
+        <Row className="mt-4">
+          <Col md={9}>
+            <PostList posts={display} setActiveFilter={setActiveFilter} />
+            <MyPagination
+                currentPage={activePage}
+                pageSize={pageSize}
+                itemsCount={filtered.length}
+                onPageChange={setActivePage}
+            />
+          </Col>
+          <Col md={3}>
+            <InfoCard />
+            <PostFilter
+                setActiveFilter={setActiveFilter}
+                activeFilter={activeFilter}
+                tags={tags}
+            />
+          </Col>
+        </Row>
+      </Container>
   );
 };
 
