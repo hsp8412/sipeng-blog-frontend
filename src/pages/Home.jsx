@@ -23,7 +23,11 @@ const Home = () => {
   }, []);
 
   const handleFilterSelected = (filter)=>{
-    setActiveFilter(filter)
+    if(activeFilter===filter){
+      setActiveFilter(null)
+    } else{
+      setActiveFilter(filter)
+    }
     setActivePage(1)
   }
 
