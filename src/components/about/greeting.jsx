@@ -9,7 +9,9 @@ const GreetingCard = () => {
         <div className="about-text mt-4">
           <p>
             Hi! I'm Sipeng He(何斯鹏), an undergraduate student at the
-            University of Calgary. I love Canada because it is such a fascinating country with breath-taking natural sceneries and diverse culture.
+            University of Calgary. I love Canada because it is such a
+            fascinating country with beautiful natural sceneries and diverse
+            culture.
           </p>
           <p>
             I want to become a developer not only because it is{" "}

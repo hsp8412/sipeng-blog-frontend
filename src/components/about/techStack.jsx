@@ -13,7 +13,8 @@ const TechStack = () => {
           <li>C#, ASP.NET</li>
           <li>MongoDB, MySQL, sequelize</li>
           <li>Java && Java Swing</li>
-          <li>Python, C, Haskell</li>
+          <li>Python, C</li>
+          <li>Haskell, Prolog</li>
         </ul>
         <h4>Interested in learning in the near future:</h4>
         <ul className="about-text">

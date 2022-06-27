@@ -8,35 +8,69 @@ const ProjectsCard = () => {
       <div className="card-body about-card">
         <h2 className="card-title">My projects</h2>
         <div>
-          <h5 className="about-title mt-4">
-            1. Workout Day Gym Management System
-          </h5>
+          <h5 className="about-title mt-4">1. Sipeng's Blog (this site!)</h5>
           <p className="about-text">
-            This is a course project from CPSC471 at the University of Calgary.
-            I completed it with another two group members. It is designed to be
-            a comprehensive system to help a gym chain interact with its
-            customers as well as doing internal management.
+            This is my personal blog site that displays my posts and information
+            about me. Features such as pagination and filtering of posts are
+            implemented. An admin system that requires login credentials is
+            built so that I can edit, delete and create new posts.
           </p>
           <p className="about-text">
             Key technologies used: React, Node.js, MongoDB
           </p>
-          <p className="about-text">My contribution:</p>
+          <p className="about-text">Features:</p>
+          <ul className="about-text">
+            <li>Display posts and other information about me</li>
+            <li>Pagination and filtering of posts</li>
+            <li>Admin system: login</li>
+            <li>Admin system: editing, deleting and create new posts</li>
+          </ul>
+          <div>
+            <FontAwesomeIcon icon={solid("arrow-up-right-from-square")} />
+            <a
+              href="https://github.com/hsp8412/sipeng-blog-frontend"
+              className="project-url mx-2"
+            >
+              https://github.com/hsp8412/sipeng-blog-frontend
+            </a>
+          </div>
+          <div>
+            <FontAwesomeIcon icon={solid("arrow-up-right-from-square")} />
+            <a
+              href="https://github.com/hsp8412/sipeng-blog-backend"
+              className="project-url mx-2"
+            >
+              https://github.com/hsp8412/sipeng-blog-backend
+            </a>
+          </div>
+        </div>
+        <div>
+          <h5 className="about-title mt-4">
+            2. Workout Day Gym Management System
+          </h5>
+          <p className="about-text">
+            This is our group project for CPSC 471 at the University of Calgary.
+            I completed it with other two group members. It is designed to be a
+            comprehensive system to help a gym chain interact with its customers
+            as well as managing equipments, employees, orders, etc.
+          </p>
+          <p className="about-text">
+            Key technologies used: React, Node.js, MongoDB
+          </p>
+          <p className="about-text">My contributions:</p>
           <ul className="about-text">
             <li>
-              E-commerce logic: products display, shopping cart, place orders
+              E-commerce features: products display, shopping cart, place
+              orders, etc.
             </li>
-            <li>
-              Display the basic information and fitness data of the customer.
-            </li>
+            <li>Display the fitness data of the customer.</li>
             <li>Branch information display for the executive manager.</li>
-            <li>Login and register form for customers.</li>
-            <li>Part of the mongoose model schemas.</li>
-            <li>Part of the express APIs.</li>
+            <li>Login and sign up form for customers.</li>
+            <li>Some of the mongoose model schemas.</li>
+            <li>Some of the express APIs.</li>
             <li>Backend API authentications for customers.</li>
           </ul>
-          <p className="about-text">
-            Other contributors: Junyi Li, Yihan(Joy) Wang
-          </p>
+          <p className="about-text">Other contributors: Junyi Li, Yihan Wang</p>
           <div>
             <FontAwesomeIcon icon={solid("arrow-up-right-from-square")} />
             <a
@@ -48,7 +82,7 @@ const ProjectsCard = () => {
           </div>
         </div>
         <div>
-          <h5 className="about-title mt-4">2. My Shop Ecommerce Site</h5>
+          <h5 className="about-title mt-4">3. My Shop Ecommerce Site</h5>
           <p className="about-text">
             This is an ecommerce site for customers to browse products and make
             purchase.
@@ -63,20 +97,29 @@ const ProjectsCard = () => {
             <li>Product searching bar.</li>
             <li>Customer adding products to the shopping cart.</li>
             <li>Customer modify the items in the shopping cart.</li>
-            <li>Login and register for customers.</li>
+            <li>Login and sign up for customers.</li>
           </ul>
           <div>
             <FontAwesomeIcon icon={solid("arrow-up-right-from-square")} />
             <a
-              href="https://github.com/hsp8412/my-shop"
+              href="https://github.com/hsp8412/my-shop-frontend"
               className="project-url mx-2"
             >
-              https://github.com/hsp8412/my-shop
+              https://github.com/hsp8412/my-shop-frontend
+            </a>
+          </div>
+          <div>
+            <FontAwesomeIcon icon={solid("arrow-up-right-from-square")} />
+            <a
+              href="https://github.com/hsp8412/my-shop-backend"
+              className="project-url mx-2"
+            >
+              https://github.com/hsp8412/my-shop-backend
             </a>
           </div>
         </div>
         <div>
-          <h5 className="about-title mt-4">3. China Travel Guide</h5>
+          <h5 className="about-title mt-4">4. China Travel Guide</h5>
           <p className="about-text">
             A guide that introduce the "must-dos" when visiting Chinese cities
             of different provinces.
