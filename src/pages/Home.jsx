@@ -7,29 +7,33 @@ import _ from "lodash";
 import PostFilter from "../components/posts/postFilter";
 import MyPagination from "../components/admin/pagination";
 import { paginate } from "../utils/paginate";
+import MySpinner from "../components/mySpinner";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
   const [activeFilter, setActiveFilter] = useState(null);
   const [activePage, setActivePage] = useState(1);
   const [pageSize, setPageSize] = useState(4);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchPosts = async () => {
       const res = await getPosts();
       setPosts(res.data);
+      setLoading(false);
     };
+    setLoading(true);
     fetchPosts();
   }, []);
 
-  const handleFilterSelected = (filter)=>{
-    if(activeFilter===filter){
-      setActiveFilter(null)
-    } else{
-      setActiveFilter(filter)
+  const handleFilterSelected = (filter) => {
+    if (activeFilter === filter) {
+      setActiveFilter(null);
+    } else {
+      setActiveFilter(filter);
     }
-    setActivePage(1)
-  }
+    setActivePage(1);
+  };
 
   const getTags = () => {
     let tags = [];
@@ -60,27 +64,40 @@ const Home = () => {
   let display = _.chunk(paginated, 2);
 
   return (
-      <Container>
-        <Row className="mt-4">
-          <Col md={9}>
-            <PostList posts={display} onFilterSelected={handleFilterSelected} />
-            <MyPagination
+    <Container>
+      <Row className="mt-4">
+        <Col md={9}>
+          {loading ? (
+            <MySpinner />
+          ) : (
+            <div>
+              <PostList
+                posts={display}
+                onFilterSelected={handleFilterSelected}
+              />
+              <MyPagination
                 currentPage={activePage}
                 pageSize={pageSize}
                 itemsCount={filtered.length}
                 onPageChange={setActivePage}
-            />
-          </Col>
-          <Col md={3}>
-            <InfoCard />
+              />
+            </div>
+          )}
+        </Col>
+        <Col md={3}>
+          <InfoCard />
+          {loading ? (
+            <MySpinner />
+          ) : (
             <PostFilter
-                onFilterSelected={handleFilterSelected}
-                activeFilter={activeFilter}
-                tags={tags}
+              onFilterSelected={handleFilterSelected}
+              activeFilter={activeFilter}
+              tags={tags}
             />
-          </Col>
-        </Row>
-      </Container>
+          )}
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
