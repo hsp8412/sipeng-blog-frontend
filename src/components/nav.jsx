@@ -17,14 +17,14 @@ const MyNav = () => {
 
   return (
     <nav className="my-nav">
-      <a className="nav-logo" href="/about">
+      <a className="nav-logo" href="/">
         <FontAwesomeIcon icon={solid("earth-asia")} size="2x" />
       </a>
 
       <ul className={`nav-menu ${showMenu ? "menu-active" : ""}`}>
         <li>
-          <a href="/" className="menu-item">
-            Home
+          <a href="/posts" className="menu-item">
+            Posts
           </a>
         </li>
         <li>

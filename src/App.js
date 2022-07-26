@@ -12,13 +12,16 @@ import ProtectedRoute from "./components/protectedRoute";
 import EditPost from "./pages/admin/EditPost";
 import ManagePosts from "./pages/admin/ManagePosts";
 import NotFound from "./pages/notFound";
+import Index from "./pages";
+import Posts from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
       <MyNav />
       <Routes>
-        <Route path="/" element={<Home />} />
+          <Route path="/" element={<Index />} />
+        <Route path="/posts" element={<Posts />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/post/:id" element={<Post />} />

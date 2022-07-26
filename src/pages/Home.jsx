@@ -9,7 +9,7 @@ import MyPagination from "../components/admin/pagination";
 import { paginate } from "../utils/paginate";
 import MySpinner from "../components/mySpinner";
 
-const Home = () => {
+const Posts = () => {
   const [posts, setPosts] = useState([]);
   const [activeFilter, setActiveFilter] = useState(null);
   const [activePage, setActivePage] = useState(1);
@@ -101,4 +101,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Posts;
