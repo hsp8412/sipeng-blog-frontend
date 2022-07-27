@@ -9,14 +9,16 @@ const Index = () => {
     <header>
       <div className="container d-flex flex-column justify-content-around align-items-center flex-md-row">
         <div className="header-content mb-4">
-          <h1 className="mb-4">Welcome to Sipeng He's blog!</h1>
-          <h3 className="mb-4">Computer Science Student & Developer</h3>
+          <h1 className="mb-4 header-title-1">Welcome to Sipeng He's blog!</h1>
+          <h3 className="mb-4 header-title-2">
+            Computer Science Student & Developer
+          </h3>
           <Link to="/about">
             <button className="index-btn mb-4">
               More about me <FontAwesomeIcon icon={solid("arrow-right")} />
             </button>
           </Link>
-          <div className="icons d-flex justify-content-center gap-2 mt-2">
+          <div className="header-icons icons d-flex justify-content-center gap-2 mt-2">
             <a
               href="https://www.linkedin.com/in/sipeng-he-250654190/"
               target="_blank"
@@ -51,7 +53,12 @@ const Index = () => {
             </a>
           </div>
         </div>
-        <img src="img_2.jpeg" alt="" style={{ width: "400px" }} />
+        <img
+          src="img_2.jpeg"
+          alt=""
+          style={{ width: "400px" }}
+          className="index-img"
+        />
       </div>
     </header>
   );
