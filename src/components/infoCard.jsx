@@ -55,6 +55,9 @@ const InfoCard = () => {
             <FontAwesomeIcon icon={brands("instagram-square")} size="2x" />
           </a>
         </div>
+        <a href="/resume.pdf" download="Resume-Sipeng_He">
+          Download my resume
+        </a>
       </div>
     </div>
   );

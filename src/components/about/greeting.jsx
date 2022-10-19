@@ -8,10 +8,9 @@ const GreetingCard = () => {
         <h2 className="about-title">Who am I?</h2>
         <div className="about-text mt-4">
           <p>
-            Hi! I'm Sipeng He(何斯鹏), an undergraduate student at the
-            University of Calgary. I love Canada because it is such a
-            fascinating country with beautiful natural sceneries and diverse
-            culture.
+            Hi! My name is Sipeng He(何斯鹏). I'm an undergraduate student at
+            the university of Calgary, Canada. I'm also working as an intern at
+            the IT department of Alberta Health Services.
           </p>
           <p>
             I want to become a developer not only because it is{" "}
