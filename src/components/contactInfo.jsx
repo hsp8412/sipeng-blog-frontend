@@ -1,17 +1,19 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import "../css/contact.css";
-import { Container, FloatingLabel, Form } from "react-bootstrap";
-import { solid, regular } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { Form } from "react-bootstrap";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
+import MySpinner from "./mySpinner";
 
 const ContactInfo = () => {
   const serviceId = process.env.REACT_APP_SERVICE_ID;
   const templateId = process.env.REACT_APP_TEMPLATE_ID;
   const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+  const [submitting, setSubmitting] = useState(false);
 
   const {
     handleChange,
@@ -28,6 +30,7 @@ const ContactInfo = () => {
       message: "",
     },
     onSubmit: async ({ username, email, message }, { resetForm }) => {
+      setSubmitting(true);
       emailjs
         .send(
           serviceId,
@@ -43,6 +46,7 @@ const ContactInfo = () => {
         .then(
           function (response) {
             toast.success("Thank you for your message!");
+            setSubmitting(false);
             resetForm();
           },
           function (error) {
@@ -115,9 +119,16 @@ const ContactInfo = () => {
                 {touched.message && errors.message ? errors.message : null}
               </Form.Text>
             </Form.Group>
-            <button className="send-btn mt-3" type="submit">
-              Send
-            </button>
+            <div className="d-flex">
+              <button className="send-btn mt-3" type="submit">
+                Send
+              </button>
+              {submitting ? (
+                <div className="ms-4">
+                  <MySpinner />
+                </div>
+              ) : null}
+            </div>
           </Form>
         </div>
       </div>
