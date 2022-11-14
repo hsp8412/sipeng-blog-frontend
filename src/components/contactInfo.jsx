@@ -119,16 +119,15 @@ const ContactInfo = () => {
                 {touched.message && errors.message ? errors.message : null}
               </Form.Text>
             </Form.Group>
-            <div className="d-flex">
+            {submitting ? (
+              <div className="ms-4">
+                <MySpinner />
+              </div>
+            ) : (
               <button className="send-btn mt-3" type="submit">
                 Send
               </button>
-              {submitting ? (
-                <div className="ms-4">
-                  <MySpinner />
-                </div>
-              ) : null}
-            </div>
+            )}
           </Form>
         </div>
       </div>
