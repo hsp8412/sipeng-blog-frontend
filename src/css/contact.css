@@ -19,3 +19,23 @@
     height: auto;
     max-width: 35rem;
 }
+
+.message-textarea{
+    height: 100px;
+}
+
+.send-btn{
+    background-color: white;
+    border: 5px solid var(--darkGray);
+    border-radius: 15px;
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 3px 20px;
+    color: var(--darkGray);
+}
+
+.send-btn:hover{
+    background-color: var(--darkGray);
+    color: white;
+}
