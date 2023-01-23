@@ -12,8 +12,9 @@ const ProjectsCard = () => {
           <p className="about-text">
             This is my personal blog site that displays my posts and information
             about me. Features such as pagination and filtering of posts are
-            implemented. An admin system that requires login credentials is
-            built so that I can edit, delete and create new posts.
+            implemented. An admin system based on JWT authentication and
+            authorization is built so that I can edit, delete and create new
+            posts.
           </p>
           <p className="about-text">
             Key technologies used: React, Node.js, MongoDB
@@ -22,7 +23,7 @@ const ProjectsCard = () => {
           <ul className="about-text">
             <li>Display posts and other information about me</li>
             <li>Pagination and filtering of posts</li>
-            <li>Admin system: login</li>
+            <li>Admin system: JWT authentication and authorization</li>
             <li>Admin system: editing, deleting and create new posts</li>
           </ul>
           <div>
@@ -115,33 +116,6 @@ const ProjectsCard = () => {
               className="project-url mx-2"
             >
               https://github.com/hsp8412/my-shop-backend
-            </a>
-          </div>
-        </div>
-        <div>
-          <h5 className="about-title mt-4">4. China Travel Guide</h5>
-          <p className="about-text">
-            A guide that introduce the "must-dos" when visiting Chinese cities
-            of different provinces.
-          </p>
-          <p className="about-text">
-            Key technologies used: Vue, Node.js, MongoDB
-          </p>
-          <p className="about-text">Features: </p>
-          <ul className="about-text">
-            <li>Menu of cities and provinces.</li>
-            <li>
-              Basic info of cities(population, international airport, etc.)
-            </li>
-            <li>Display must-dos of cities.</li>
-          </ul>
-          <div>
-            <FontAwesomeIcon icon={solid("arrow-up-right-from-square")} />
-            <a
-              href="https://github.com/hsp8412/China-travel-guide"
-              className="project-url mx-2"
-            >
-              https://github.com/hsp8412/China-travel-guide
             </a>
           </div>
         </div>

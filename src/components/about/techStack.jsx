@@ -12,16 +12,14 @@ const TechStack = () => {
           <li>Node.js, Express, JWT</li>
           <li>C#, ASP.NET</li>
           <li>MongoDB, MySQL, sequelize</li>
-          <li>Java && Java Swing</li>
+          <li>Java, Spring Boot, Hibernate, Swing</li>
           <li>Python, C</li>
           <li>Haskell, Prolog</li>
         </ul>
-        <h4>Interested in learning in the near future:</h4>
+        <h4>Interested in exploring in the near future:</h4>
         <ul className="about-text">
-          <li>Jest</li>
           <li>C++</li>
           <li>Angular</li>
-          <li>Pandas</li>
         </ul>
       </div>
     </div>

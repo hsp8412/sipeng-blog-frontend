@@ -10,7 +10,7 @@ const GreetingCard = () => {
           <p>
             Hi! My name is Sipeng He(何斯鹏). I'm an undergraduate student at
             the university of Calgary, Canada. I'm also working as an intern at
-            the IT department of Alberta Health Services.
+            the Intelligence automation team of Alberta Health Services.
           </p>
           <p>
             I want to become a developer not only because it is{" "}
